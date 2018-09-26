@@ -1,29 +1,20 @@
 
-
-# Basic Plotting with `matplotlib` 
-
+# Customizing Visualization with `matplotlib` 
 ## Objectives
-* Create sample data for plotting exercises.
-* Plot and label simple line graphs.
-* Define, plot and label multiple absolute axes using `add_axes()` function. 
-* Define, plot and label multiple axes using `add_subplot()` function. 
+
+* Understand matplotlib plot structure for customizing plots.
+* Differentiate between absolute and relative plotting techniques.
+* Implement and tweak high level objects in matplotlib including figure and axes.
+
 
 
 ## Introduction
 
-This lab requires you to draw some basic visualizations using the techniques learnt in the previous lesson "Data Visualization with matplotlib". 
+This lab requires you to draw some basic visualizations using the techniques learnt in the previous lesson. 
 
-Let's first generate some data to carry out following exercises:
+Let's let's give you a head start by generating some data for you to plot:
 
-Perform following tasks:
-
-* Create a variable x using numpy's `.arange()` function containing values from 0 to 99.
-
-* Create a second variable y by multiplying each value in x by 2. 
-
-* Create a third variable z as square of values in x.
-
-* Print x, y and z
+We are performing following tasks:
 
 
 ```python
@@ -66,8 +57,7 @@ Import `matplotlib.pyplot` as `plt` and set `%matplotlib inline`  for generating
 
 ```python
 # import matplotlib.pyplot and set inline plotting 
-import matplotlib.pyplot as plt
-%matplotlib inline
+
 ```
 
 Now that we have our data all set and matplotlib in our python environment, we can try some basic plotting techniques.
@@ -82,13 +72,7 @@ Perform the following steps in the cell below:
 
 
 ```python
-fig = plt.figure()
-ax = fig.add_axes([0,0,1,1])
-ax.plot(x,z)
-ax.set_xlabel('x-axis label')
-ax.set_ylabel('y-axis label')
-ax.set_title('Plot title')
-plt.show()
+
 ```
 
 
@@ -108,20 +92,7 @@ Perform following actions:
 
 
 ```python
-fig = plt.figure()
-ax1 = fig.add_axes([0,0,1,1])
-ax2 = fig.add_axes([.2,.6,.3,.3])
 
-ax1.plot(x,y)
-ax1.set_xlabel('variable - x')
-ax1.set_ylabel('variable - y')
-ax1.set_title("Large Plot")
-
-ax2.plot(x,y)
-ax2.set_xlabel('variable - x')
-ax2.set_ylabel('variable - y')
-ax2.set_title("Small Plot")
-plt.show()
 ```
 
 
@@ -147,25 +118,7 @@ Perform following tasks in the cell below:
 
 
 ```python
-fig = plt.figure(figsize = (8,6))
 
-ax = fig.add_axes([0,0,1,1])
-ax2 = fig.add_axes([0.2,0.5,.4,.4])
-
-ax.plot(x,z, color = 'green')
-ax.set_xlabel('variable - x')
-ax.set_ylabel('variable - z')
-ax.set_title ('Outer Plot')
-
-
-ax2.plot(x,y, color = 'red')
-ax2.set_xlabel('variable - x')
-ax2.set_ylabel('variable - y')
-ax2.set_title('Inserted Plot')
-ax2.set_xlim(15,30)
-ax2.set_ylim(30,80)
-
-plt.show()
 ```
 
 
@@ -185,23 +138,7 @@ Perform following steps in the cell below:
 
 
 ```python
-new_figure = plt.figure(figsize=(8,6))
 
-ax = new_figure.add_subplot(121)
-ax2 = new_figure.add_subplot(122)
-
-ax.plot(x, y, color='red', linewidth=3, linestyle = ':')
-ax2.plot(x, z, color='blue', linewidth=5, linestyle = '-.')
-
-ax.set_xlabel('variable - x')
-ax.set_ylabel('variable - y')
-ax.set_title ('Left Plot')
-
-ax2.set_xlabel('variable - x')
-ax2.set_ylabel('variable - z')
-ax2.set_title ('Right Plot')
-
-plt.show()
 ```
 
 
@@ -214,23 +151,7 @@ Above figure looks fine but a bit out of proportion. Let's resize this to make t
 
 
 ```python
-new_figure = plt.figure(figsize=(18,8))
 
-ax = new_figure.add_subplot(121)
-ax2 = new_figure.add_subplot(122)
-
-ax.plot(x, y, color='red', linewidth=3, linestyle = '-')
-ax2.scatter(x, z, color='blue',  marker='^')
-
-ax.set_xlabel('variable - x')
-ax.set_ylabel('variable - y')
-ax.set_title ('Left Plot')
-
-ax2.set_xlabel('variable - x')
-ax2.set_ylabel('variable - z')
-ax2.set_title ('Right Plot')
-
-plt.show()
 ```
 
 
@@ -242,4 +163,4 @@ Congratulations, You have now learnt the basics plotting/labelling and customiza
 
 ### Summary :
 
-This lab focused on ensuring that you understand the basics plotting techqniues in matplotlib using plotting objects and functions to draw single plots, multiple/subplots using absolute and relative plotting. You also learnt how to customize the plots with labels, titles and axes definitions. Next we shall look into plotting more interesting plots with some real data. 
+This lab focused on ensuring that you understand the basics plotting techqniues in matplotlib using plotting objects and functions to draw single plots, multiple/subplots using absolute and relative plotting. You also learnt how to customize the plots with labels, titles and axes definitions. 
