@@ -1,29 +1,20 @@
 
-
-# Basic Plotting with `matplotlib` 
-
+# Customizing Visualization with `matplotlib` 
 ## Objectives
-* Create sample data for plotting exercises.
-* Plot and label simple line graphs.
-* Define, plot and label multiple absolute axes using `add_axes()` function. 
-* Define, plot and label multiple axes using `add_subplot()` function. 
+
+* Understand matplotlib plot structure for customizing plots.
+* Differentiate between absolute and relative plotting techniques.
+* Implement and tweak high level objects in matplotlib including figure and axes.
+
 
 
 ## Introduction
 
-This lab requires you to draw some basic visualizations using the techniques learnt in the previous lesson "Data Visualization with matplotlib". 
+This lab requires you to draw some basic visualizations using the techniques learnt in the previous lesson. 
 
-Let's first generate some data to carry out following exercises:
+Let's let's give you a head start by generating some data for you to plot:
 
-Perform following tasks:
-
-* Create a variable x using numpy's `.arange()` function containing values from 0 to 99.
-
-* Create a second variable y by multiplying each value in x by 2. 
-
-* Create a third variable z as square of values in x.
-
-* Print x, y and z
+We are performing following tasks:
 
 
 ```python
@@ -242,4 +233,4 @@ Congratulations, You have now learnt the basics plotting/labelling and customiza
 
 ### Summary :
 
-This lab focused on ensuring that you understand the basics plotting techqniues in matplotlib using plotting objects and functions to draw single plots, multiple/subplots using absolute and relative plotting. You also learnt how to customize the plots with labels, titles and axes definitions. Next we shall look into plotting more interesting plots with some real data. 
+This lab focused on ensuring that you understand the basics plotting techqniues in matplotlib using plotting objects and functions to draw single plots, multiple/subplots using absolute and relative plotting. You also learnt how to customize the plots with labels, titles and axes definitions. 
